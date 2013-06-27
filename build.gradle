@@ -1,0 +1,21 @@
+apply plugin: 'scala'
+apply plugin:'application'
+
+mainClassName = "com.example.Boot"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repo.spray.io"
+    }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.10.2'
+    compile 'io.spray:spray-can:1.2-M8'
+    compile 'io.spray:spray-routing:1.2-M8'
+    compile 'com.typesafe.akka:akka-actor_2.10:2.2.0-RC1'
+    testCompile 'io.spray:spray-testkit:1.2-M8'
+    testCompile 'com.typesafe.akka:akka-testkit_2.10:2.2.0-RC1'
+    testCompile 'org.specs2:specs2_2.10:1.14'
+}
